@@ -13,6 +13,14 @@ plt.style.use("fivethirtyeight") # THIS IS STYLE OF GRAPHS
 
 
 def prepare_data(df):
+  """This Function is used to prepare the data
+
+  Args:
+      df (pd.DataFrame): Dataframe to prepare input for the model_dir
+
+  Returns:
+      [tuple]: It returns the tuple
+  """
   X = df.drop("y", axis=1)
 
   y = df["y"]
@@ -21,13 +29,26 @@ def prepare_data(df):
 
 
 def save_model(model, filename):
-    model_dir = "models"
-    os.makedirs(model_dir, exist_ok=True) # ONLY CREATE IF MODEL_DIR DOESN"T EXISTS
-    filePath = os.path.join(model_dir, filename) # model/filename
-    joblib.dump(model, filePath)
+  """This function is used to save the the model
+
+  Args:
+      model (Python object containing the model to save): Model to save_model
+      filename (str): used to generate the location to save the model
+  """
+  model_dir = "models"
+  os.makedirs(model_dir, exist_ok=True) # ONLY CREATE IF MODEL_DIR DOESN"T EXISTS
+  filePath = os.path.join(model_dir, filename) # model/filename
+  joblib.dump(model, filePath)
 
 
 def save_plot(df, file_name, model):
+  """This function is used to save the plot
+
+  Args:
+      df (pd.DataFrame): Dataframe for which model is prepared
+      file_name (str): Describes the location to save the plot
+      model (python object): Python object describing the plot to save
+  """
   def _create_base_plot(df):
     df.plot(kind="scatter", x="x1", y="x2", c="y", s=100, cmap="winter")
     plt.axhline(y=0, color="black", linestyle="--", linewidth=1)
