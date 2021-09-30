@@ -45,3 +45,29 @@ if __name__ == '__main__':  ## << entry point
     main(AND,ETA,EPOCHS,filename="and.model",plotfilename="and.png")
 
 ```
+
+## dataset
+
+ x1 | x2 | y 
+ - | - | - 
+ 0 | 0 | 0 
+ 0 | 1 | 0 
+ 1 | 0 | 0 
+ 1 | 1 | 1 
+
+###
+* point 1
+* point 2
+
+1. Point 1 
+2. Point 2 
+
+
+
+
+
+
+
+
+
+
