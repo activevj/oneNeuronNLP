@@ -55,7 +55,7 @@ if __name__ == '__main__':  ## << entry point
  1 | 0 | 0 
  1 | 1 | 1 
 
-###
+### Points
 * point 1
 * point 2
 
