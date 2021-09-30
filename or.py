@@ -1,3 +1,10 @@
+
+"""
+author: Vijay
+email: uservjkumar@gmail.com
+"""
+
+
 from utils.model import Perceptron
 import pandas as pd
 import numpy as np
